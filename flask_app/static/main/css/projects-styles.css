@@ -1,0 +1,19 @@
+main{
+    grid-template-rows: 3fr  9fr 2fr;
+    margin: 2vh 10vw;
+}
+
+.row-zeroth {
+    place-items: center;
+    text-align: center;
+    font-size: inherit;
+    border-bottom: solid rgb(200, 200, 200);
+}
+
+aside a {
+    height: inherit;
+}
+
+em {
+    font-size: 1.4em;
+}

@@ -1,0 +1,10 @@
+footer {
+    margin-top: 7vh;
+    width: 100vw;
+    height: 10vh;
+    background-color: rgb(240, 240, 240);
+    color: rgb(160, 160, 160);
+    place-content: center;
+    text-align: center;
+    font-size: calc(1em + 1vmin);
+}
