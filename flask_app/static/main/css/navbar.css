@@ -69,6 +69,10 @@ ul li a:hover {
     width: 100%;
 }
 
+#navbar-mobile.visible {
+    display: block;
+}
+
 #navbar-mobile li{
     margin-top: 2vh;
     margin-bottom: 2vh;

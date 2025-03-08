@@ -17,19 +17,7 @@ const sound = {65:"http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav",
                 80:"http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav",
                 186:"http://carolinegabriel.com/demo/js-keyboard/sounds/056.wav"};
 
-
-// Color of a white key
-const whiteKeyColor = 'rgb(255, 255, 255)';
-
-// Color of a white key when pressed
-const whiteKeyDownColor = 'rgb(150, 150, 150)';
-
-// Color of a black key
-const blackKeyColor = 'rgb(0, 0, 0)';
-
-// Color of a black key when pressed
-const blackKeyDownColor = 'rgb(100, 100, 100)';
-
+                
 // Action performed when a key is pressed
 const keyPressAction = function(event) {
     // Play the audio
@@ -39,55 +27,55 @@ const keyPressAction = function(event) {
     // Key color change effect
     switch(event.keyCode) {
         case 65:
-            keyA.style.backgroundColor = whiteKeyDownColor;
+            keyA.classList.add('white-down');
             break;
         case 83:
-            keyS.style.backgroundColor = whiteKeyDownColor;
+            keyS.classList.add('white-down');
             break;
         case 68:
-            keyD.style.backgroundColor = whiteKeyDownColor;
+            keyD.classList.add('white-down');
             break;
         case 70:
-            keyF.style.backgroundColor = whiteKeyDownColor;
+            keyF.classList.add('white-down');
             break;
         case 71:
-            keyG.style.backgroundColor = whiteKeyDownColor;
+            keyG.classList.add('white-down');
             break;
         case 72:
-            keyH.style.backgroundColor = whiteKeyDownColor;
+            keyH.classList.add('white-down');
             break;
         case 74:
-            keyJ.style.backgroundColor = whiteKeyDownColor;
+            keyJ.classList.add('white-down');
             break;
         case 75:
-            keyK.style.backgroundColor = whiteKeyDownColor;
+            keyK.classList.add('white-down');
             break;
         case 76:
-            keyL.style.backgroundColor = whiteKeyDownColor;
+            keyL.classList.add('white-down');
             break;
         case 186:
-            keySemicolon.style.backgroundColor = whiteKeyDownColor;
+            keySemicolon.classList.add('white-down');
             break;
         case 87:
-            keyW.style.backgroundColor = blackKeyDownColor;
+            keyW.classList.add('black-down');
             break;
         case 69:
-            keyE.style.backgroundColor = blackKeyDownColor;
+            keyE.classList.add('black-down');
             break;
         case 84:
-            keyT.style.backgroundColor = blackKeyDownColor;
+            keyT.classList.add('black-down');
             break;
         case 89:
-            keyY.style.backgroundColor = blackKeyDownColor;
+            keyY.classList.add('black-down');
             break;
         case 85:
-            keyU.style.backgroundColor = blackKeyDownColor;
+            keyU.classList.add('black-down');
             break;
         case 79:
-            keyO.style.backgroundColor = blackKeyDownColor;
+            keyO.classList.add('black-down');
             break;
         case 80:
-            keyP.style.backgroundColor = blackKeyDownColor;
+            keyP.classList.add('black-down');
             break;
     }
 
@@ -103,13 +91,12 @@ const keyPressAction = function(event) {
 
     if ((first === 85) && (second === 79) && (third === 89) && (fourth === 69)
         && (fifth === 69) && (sixth === 83) && (seventh === 69) && (eighth === 87)) {
-            let sound = new Audio('https://orangefreesounds.com/wp-content/uploads/2020/09/Creepy-piano-sound-effect.mp3?_=1');
-            sound.play();
 
-        piano[0].style.display = 'none';
-        creature.style.height = 'auto';
-        creature.style.visibility = 'visible';
-        creature.style.opacity = '1';
+        let sound = new Audio('https://orangefreesounds.com/wp-content/uploads/2020/09/Creepy-piano-sound-effect.mp3?_=1');
+        sound.play();
+
+        piano[0].classList.add('hidden');
+        creature.classList.add('appear');
 
         document.removeEventListener('keydown', keyPressAction);
         document.removeEventListener('keyup', keyUpAction);
@@ -123,55 +110,55 @@ const keyPressAction = function(event) {
 const keyUpAction = function(event) {
     switch(event.keyCode) {
         case 65:
-            keyA.style.backgroundColor = whiteKeyColor;
+            keyA.classList.remove('white-down');
             break;
         case 83:
-            keyS.style.backgroundColor = whiteKeyColor;
+            keyS.classList.remove('white-down');
             break;
         case 68:
-            keyD.style.backgroundColor = whiteKeyColor;
+            keyD.classList.remove('white-down');
             break;
         case 70:
-            keyF.style.backgroundColor = whiteKeyColor;
+            keyF.classList.remove('white-down');
             break;
         case 71:
-            keyG.style.backgroundColor = whiteKeyColor;
+            keyG.classList.remove('white-down');
             break;
         case 72:
-            keyH.style.backgroundColor = whiteKeyColor;
+            keyH.classList.remove('white-down');
             break;
         case 74:
-            keyJ.style.backgroundColor = whiteKeyColor;
+            keyJ.classList.remove('white-down');
             break;
         case 75:
-            keyK.style.backgroundColor = whiteKeyColor;
+            keyK.classList.remove('white-down');
             break;
         case 76:
-            keyL.style.backgroundColor = whiteKeyColor;
+            keyL.classList.remove('white-down');
             break;
         case 186:
-            keySemicolon.style.backgroundColor = whiteKeyColor;
+            keySemicolon.classList.remove('white-down');
             break;
         case 87:
-            keyW.style.backgroundColor = blackKeyColor;
+            keyW.classList.remove('black-down');
             break;
         case 69:
-            keyE.style.backgroundColor = blackKeyColor;
+            keyE.classList.remove('black-down');
             break;
         case 84:
-            keyT.style.backgroundColor = blackKeyColor;
+            keyT.classList.remove('black-down');
             break;
         case 89:
-            keyY.style.backgroundColor = blackKeyColor;
+            keyY.classList.remove('black-down');
             break;
         case 85:
-            keyU.style.backgroundColor = blackKeyColor;
+            keyU.classList.remove('black-down');
             break;
         case 79:
-            keyO.style.backgroundColor = blackKeyColor;
+            keyO.classList.remove('black-down');
             break;
         case 80:
-            keyP.style.backgroundColor = blackKeyColor;
+            keyP.classList.remove('black-down');
             break;
     }
 };
@@ -221,14 +208,14 @@ document.addEventListener('keyup', keyUpAction);
 // Action performed when mouse hovers over any key
 const hoverAction = function() {
     for (let index = 0; index < keys.length; index++) {
-        keys[index].style.visibility = 'visible';
+        keys[index].classList.add('key-hover');
     }
 };
 
 // Action performed when mouse stops hovering over the keys
 const hoverRemove = function() {
     for (let index = 0; index < keys.length; index++) {
-        keys[index].style.visibility = 'hidden';
+        keys[index].classList.remove('key-hover');
     }
 };
 

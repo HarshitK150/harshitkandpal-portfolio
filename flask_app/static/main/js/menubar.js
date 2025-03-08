@@ -1,8 +1,8 @@
 const showNavbarMobile = function() {
-    if (navbarMobile.style.display === 'block') {
-        navbarMobile.style.display = 'none';
+    if (navbarMobile.classList.contains('visible')) {
+        navbarMobile.classList.remove('visible');
     } else {
-        navbarMobile.style.display = 'block';
+        navbarMobile.classList.add('visible');
     }
 };
 
