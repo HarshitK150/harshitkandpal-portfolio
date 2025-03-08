@@ -1,9 +1,9 @@
-# Author  : Prof. MM Ghassemi <ghassem3@msu.edu>
+# Author: Harshit Kandpal <hkandpal944@gmail.com>
 
 # Instantiate Ubuntu 20.04
 FROM ubuntu:20.04
-LABEL maintainer "Mohammad Ghassemi <ghassem3@msu.edu>"
-LABEL description="This is custom Docker Image for Dr. Ghassemi's Web Application Course"
+LABEL maintainer "Harshit Kandpal <hkandpal944@gmail.com>"
+LABEL description="This is a custom Docker Image for Harshit Kandpal's Web Application Projects"
 
 # Update Ubuntu Software repository
 RUN apt update
