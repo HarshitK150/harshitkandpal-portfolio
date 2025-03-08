@@ -20,7 +20,6 @@ main > p {
     height: 50vh;
     width: 40vw;
     margin: 2vh auto;
-    justify-items: center;
     color: #ffffff;
     background-color: rgb(66, 63, 75);
     font-family: cursive;
@@ -31,7 +30,7 @@ main > p {
 }
 
 .keys {
-    margin-top: 10%;
+    margin: 10% auto 0;
     position: relative;
     width: 90%;
     height: 60%;
@@ -58,7 +57,6 @@ main > p {
 
 .white {
     position: relative;
-    justify-self: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 1%;
@@ -82,18 +80,14 @@ main > p {
 
 .black {
     position: relative;
+    margin: 0 auto;
     top: -100%;
-    justify-self: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 7%;
     width: 85%;
     height: 70%;
     align-items: center;
-}
-
-.black div.black-down {
-    background-color: rgb(100, 100, 100);
 }
 
 .black div {
@@ -103,6 +97,10 @@ main > p {
     align-content: end;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
+}
+
+.black div.black-down {
+    background-color: rgb(100, 100, 100);
 }
 
 .black div.invisible {
