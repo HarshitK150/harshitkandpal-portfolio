@@ -4,7 +4,7 @@ from flask import render_template, redirect
 
 @app.route('/')
 def root():
-	return redirect('/home')
+	return redirect('/home.html')
 
 @app.route('/<page>')
 def route(page):
