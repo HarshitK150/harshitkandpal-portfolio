@@ -1,51 +1,45 @@
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Harshit Kandpal's Projects</title>
-    <link rel="stylesheet" href="../static/main/css/header.css">
-    <link rel="stylesheet" href="../static/main/css/navbar.css">
-    <link rel="stylesheet" href="../static/main/css/main.css">
-    <link rel="stylesheet" href="../static/main/css/footer.css">
-    <link rel="stylesheet" href="../static/main/css/projects-styles.css">
-    <link rel="shortcut icon" href="../static/main/images/favicon.ico">
-    <script src="../static/main/js/menubar.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <img src="../static/main/images/banner.jpg" alt="A canyon with wavy rocks" loading="lazy">
-    </header>
-    <nav>
-      <h1 id="nav-header">HARSHIT KANDPAL</h1>
-      <ul id="navbar-options">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="../static/main/images/Harshit_Kandpal_.pdf" target="_blank">Resume</a></li>
-        <li><a href="https://www.linkedin.com/in/harshit-kandpal-8a1a50344" target="_blank">
-              <img src="../static/main/images/social-linkedin.png" alt="Linkedin Icon" loading="lazy">
-            </a>
-        </li>
-      </ul>
-      <img id="menu-bar" src="../static/main/images/menu-bar.png" alt="Menubar Icon" loading="lazy">
-      <ul id="navbar-mobile">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="../static/main/images/Harshit_Kandpal_.pdf" target="_blank">Resume</a></li>
-        <li><a href="https://www.linkedin.com/in/harshit-kandpal-8a1a50344" target="_blank">LinkedIn</a></li>
-      </ul>
-    </nav>
-    <main>
+{% extends 'shared/layout.html' %}
+
+{% block extracss %}
+<link rel="stylesheet"    href="{{ url_for('static', filename='main/css/main.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='main/css/projects-styles.css') }}">
+{% endblock %}
+
+{% block maincontent %}
       <div class="row-zeroth">
-        <h2>Below is a list of projects I've worked on:</h2>
+        <h2>Below is a list of projects I worked on:</h2>
         <p>
           Click an image, or hyperlink in the description to learn more.
         </p>
       </div>
+
       <div class="row-first">
         <aside>
-          <a href="piano.html">
-            <img src="../static/main/images/piano.jpeg" alt="A grand piano" loading="lazy">
+          <a href="/chat">
+            <img src="{{ url_for('static', filename='main/images/chat_screenshot.png') }}" alt="A screenshot of a chatroom" loading="lazy">
+          </a>
+        </aside>
+        <div class="about">
+          <article>
+            <h2>
+              Chatroom
+            </h2>
+            <p>
+              I built a 90s-style chatroom using HTML, CSS, JavaScript, and jQuery for the front end, with Flask powering the back end.
+              It features real-time messaging via Socket.IO, uses MySQL for persistent user data, and leverages AJAX for asynchronous communication with the server.
+              Users can try it out by logging in with <span class="bold">owner@email.com</span> or <span class="bold">guest@email.com</span>
+                (password: <strong>password</strong>), or create their own account.
+              This project showcases my full-stack development skills and ability to integrate modern tools with a retro design.
+              <a href="/chat">Click here to try it out!</a>
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <div class="row-first">
+        <aside>
+          <a href="/piano">
+            <img src="{{ url_for('static', filename='main/images/piano.jpeg') }}" alt="A grand piano" loading="lazy">
           </a>
         </aside>
         <div class="about">
@@ -54,18 +48,19 @@
               Javascript Piano
             </h2>
             <p>
-              I developed an interactive piano built purely in HTML, CSS and Javascript. 
-              This tool (in addition to my webpage) highlights my ability 
-              to build beautiful and mobile-friendly front-end applications. 
-              <a href="piano.html">Click here to see and play!</a>
+              I developed an interactive piano built purely in HTML, CSS and Javascript.
+              This tool (in addition to my webpage) highlights my ability
+              to build beautiful and mobile-friendly front-end applications.
+              <a href="/piano">Click here to see and play!</a>
             </p>
           </article>
         </div>
       </div>
+
       <div class="row-first">
         <aside>
           <a href="https://github.com/HarshitK150/puzzle-app" target="_blank">
-            <img src="../static/main/images/sparty.webp" alt="Sparty puzzle" loading="lazy">
+            <img src="{{ url_for('static', filename='main/images/sparty.webp') }}" alt="Sparty puzzle" loading="lazy">
           </a>
         </aside>
         <div class="about">
@@ -74,11 +69,9 @@
               Puzzle App
             </h2>
             <p>
-              I am currently working on an interactive puzzle game for Android that challenges 
-              players with engaging puzzles. This project showcases my 
-              expertise in mobile app development, emphasizing an intuitive user interface, 
-              smooth animations, and optimized performance. The game is being developed using 
-              Java, Android SDK, Android API, and Jetpack Components.
+              I developed an interactive puzzle game for Android that challenges players with engaging puzzles.
+              This completed project showcases my expertise in mobile app development, emphasizing an intuitive user interface,
+              smooth animations, and optimized performance. The game was built using Java, the Android SDK, Android API, XML, and Gradle.
               <a href="https://github.com/HarshitK150/puzzle-app" target="_blank">
                 Check out the source code here!
               </a>
@@ -89,7 +82,8 @@
       <div class="row-first">
         <aside>
           <a href="https://github.com/HarshitK150/spartys-boots" target="_blank">
-            <img src="../static/main/images/spartys_boots_screenshot.png" alt="A screenshot of Sparty's Boots game" loading="lazy">
+            <img src="{{ url_for('static', filename='main/images/spartys_boots_screenshot.png') }}"
+                 alt="A screenshot of Sparty's Boots game" loading="lazy">
           </a>
         </aside>
         <div class="about">
@@ -98,10 +92,10 @@
               Sparty's Boots
             </h2>
             <p>
-              I developed an interactive desktop game where players control Sparty 
-              and kick objects off a conveyor using logic gates. This project was completed as part of a 
-              team of 5 and showcases my skills in creating a visually appealing GUI, incorporating 
-              animations, and ensuring cross-platform compatibility. The technologies utilized in this 
+              I developed an interactive desktop game where players control Sparty
+              and kick objects off a conveyor using logic gates. This project was completed as part of a
+              team of 5 and showcases my skills in creating a visually appealing GUI, incorporating
+              animations, and ensuring cross-platform compatibility. The technologies utilized in this
               project are C++, wxWidgets, XML, and CMake.
               <a href="https://github.com/HarshitK150/spartys-boots" target="_blank">
                 Click here for the source code!
@@ -110,14 +104,11 @@
           </article>
         </div>
       </div>
+
       <div class="row-second">
         <p>
           <em>More coming soon!</em>
         </p>
       </div>
-    </main>
-    <footer>
-      © 2025 Harshit Kandpal
-    </footer>
-  </body>
-</html>
+
+{% endblock %}

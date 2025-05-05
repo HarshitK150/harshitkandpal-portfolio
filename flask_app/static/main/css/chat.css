@@ -1,0 +1,24 @@
+main {
+    grid-template-rows: 0.5fr 3.5fr 0.7fr 1fr;
+}
+
+#chat {
+    width: 100%;
+    height: 35vh;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid hsl(0, 0%, 80%);
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 0.8em;
+    resize: none;
+    overflow-y: auto;
+}
+
+#inputBox {
+    height: 100%;
+}
+
+#leaveChat {
+    height: 70%;
+}

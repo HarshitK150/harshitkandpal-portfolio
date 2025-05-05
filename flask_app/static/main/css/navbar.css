@@ -20,7 +20,7 @@ h1 {
     margin-right: 9vw;
     justify-self: right;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 2vw;
     align-items: center;
     justify-items: center;

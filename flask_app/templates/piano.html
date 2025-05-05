@@ -1,41 +1,14 @@
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Harshit Kandpal's Piano</title>
-    <link rel="stylesheet" href="../static/main/css/header.css">
-    <link rel="stylesheet" href="../static/main/css/navbar.css">
-    <link rel="stylesheet" href="../static/main/css/footer.css">
-    <link rel="stylesheet" href="../static/piano/css/piano.css">
-    <link rel="shortcut icon" href="../static/main/images/favicon.ico">
-    <script src="../static/main/js/menubar.js" defer></script>
-    <script src="../static/piano/js/piano.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <img src="../static/main/images/banner.jpg" alt="A canyon with wavy rocks" loading="lazy">
-    </header>
-    <nav>
-      <h1 id="nav-header">HARSHIT KANDPAL</h1>
-      <ul id="navbar-options">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="../static/main/images/Harshit_Kandpal_.pdf" target="_blank">Resume</a></li>
-        <li><a href="https://www.linkedin.com/in/harshit-kandpal-8a1a50344" target="_blank">
-              <img src="../static/main/images/social-linkedin.png" alt="Linkedin Icon" loading="lazy">
-            </a>
-        </li>
-      </ul>
-      <img id="menu-bar" src="../static/main/images/menu-bar.png" alt="Menubar Icon" loading="lazy">
-      <ul id="navbar-mobile">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="../static/main/images/Harshit_Kandpal_.pdf" target="_blank">Resume</a></li>
-        <li><a href="https://www.linkedin.com/in/harshit-kandpal-8a1a50344" target="_blank">LinkedIn</a></li>
-      </ul>
-    </nav>
-    <main>
+{% extends 'shared/layout.html' %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='piano/css/piano.css') }}">
+{% endblock %}
+
+{% block extrajs %}
+<script src="{{ url_for('static', filename='piano/js/piano.js') }}" defer></script>
+{% endblock %}
+
+{% block maincontent %}  
       <p>
         Behold piano great and old, it's master slumbers in far off cold, If you wish to see anew, 
         call out to it - we see you.
@@ -71,15 +44,11 @@
         </div>
       </div>
       <div id="image-wrapper">
-        <img id="creature" src="../static/piano/images/texture.jpeg" 
+        <img id="creature" src="{{ url_for('static', filename='piano/images/texture.jpeg') }}" 
           alt="A one-eyed creature with tentacles hovering over lava and rocks" loading="lazy">
         <h2 id="creature-text">
           I have awoken.
         </h2>
       </div>
-    </main>
-    <footer>
-      © 2025 Harshit Kandpal
-    </footer>
-  </body>
-</html>
+
+{% endblock %}

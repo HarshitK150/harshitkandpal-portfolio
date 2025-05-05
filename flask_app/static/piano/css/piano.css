@@ -1,155 +1,155 @@
 main{
-    width: 80vw;
-    margin: 5vh 10vw;
-    font-size: calc(1em + 1vmin);
-    color: rgb(85, 85, 85);
-    text-align: center;
+  width: 80vw;
+  margin: 5vh 10vw;
+  font-size: calc(1em + 1vmin);
+  color: rgb(85, 85, 85);
+  text-align: center;
 }
 
 main > p {
-    font-style: italic;
-    border-bottom: solid rgb(200, 200, 200);
-    height: 10vh;
+  font-style: italic;
+  border-bottom: solid rgb(200, 200, 200);
+  height: 10vh;
 }
 
 .piano {
-    padding-top: 2%;
-    position: relative;
-    border-top-right-radius: 40px;
-    border-top-left-radius: 40px;
-    height: 50vh;
-    width: 40vw;
-    margin: 2vh auto;
-    color: #ffffff;
-    background-color: rgb(66, 63, 75);
-    font-family: cursive;
+  padding-top: 2%;
+  position: relative;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  height: 50vh;
+  width: 40vw;
+  margin: 2vh auto;
+  color: #ffffff;
+  background-color: rgb(66, 63, 75);
+  font-family: cursive;
 }
 
 .piano.hidden {
-    display: none;
+  display: none;
 }
 
 .keys {
-    margin: 10% auto 0;
-    position: relative;
-    width: 90%;
-    height: 60%;
-    background-color: black;
-    border-radius: 9px;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 10% auto 0;
+  position: relative;
+  width: 90%;
+  height: 60%;
+  background-color: black;
+  border-radius: 9px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .key {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .key.key-hover {
-    visibility: visible;
+  visibility: visible;
 }
 
 .keys:hover {
-    cursor: none;
+  cursor: none;
 }
 
 .keys > div > div{
-    border-radius: 7px;
+  border-radius: 7px;
 }
 
 .white {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 1%;
-    width: 100%;
-    height: 100%;
-    align-items: center;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1%;
+  width: 100%;
+  height: 100%;
+  align-items: center;
 }
 
 .white div {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    align-content: end;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+  position: relative;
+  height: 100%;
+  width: 100%;
+  align-content: end;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 .white div.white-down {
-    background-color: rgb(150, 150, 150);
+  background-color: rgb(150, 150, 150);
 }
 
 .black {
-    position: relative;
-    margin: 0 auto;
-    top: -100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 7%;
-    width: 85%;
-    height: 70%;
-    align-items: center;
+  position: relative;
+  margin: 0 auto;
+  top: -100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 7%;
+  width: 85%;
+  height: 70%;
+  align-items: center;
 }
 
 .black div {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    align-content: end;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+  position: relative;
+  height: 100%;
+  width: 100%;
+  align-content: end;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .black div.black-down {
-    background-color: rgb(100, 100, 100);
+  background-color: rgb(100, 100, 100);
 }
 
 .black div.invisible {
-    border: transparent;
-    background-color: transparent;
+  border: transparent;
+  background-color: transparent;
 }
 
 
 #image-wrapper {
-    visibility: hidden;
-    position: relative;
-    height: 5vh;
-    opacity: 0.3;
-    transition: opacity 2s ease-in;
-    overflow: hidden;
+  visibility: hidden;
+  position: relative;
+  height: 5vh;
+  opacity: 0.3;
+  transition: opacity 2s ease-in;
+  overflow: hidden;
 }
 
 #creature {
-    margin: 0 auto;
-    position: relative;
-    top: -50%;
-    border-top-right-radius: 40px;
-    border-top-left-radius: 40px;
-    height: 53vh;
-    width: 40vw;
+  margin: 0 auto;
+  position: relative;
+  top: -50%;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  height: 53vh;
+  width: 40vw;
 }
 
 #image-wrapper.appear {
-    height: auto;
-    visibility: visible;
-    opacity: 1;
+  height: auto;
+  visibility: visible;
+  opacity: 1;
 }
 
 #creature-text {
-    font-size: 1.5em;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #ffffff;
-    font-family: cursive;
+  font-size: 1.5em;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  font-family: cursive;
 }
 
 @media screen and (max-width: 650px) {
-    .piano {
-        width: 80vw;
-    }
+  .piano {
+      width: 80vw;
+  }
 
-    #creature {
-        width: 80vw;
-    }
+  #creature {
+      width: 80vw;
+  }
 }
