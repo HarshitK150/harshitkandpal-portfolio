@@ -1,0 +1,25 @@
+{% extends 'shared/layout.html' %}
+
+{% block extracss %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='main/css/login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main/css/register.css') }}">
+{% endblock %}
+
+{% block extrajs %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="{{ url_for('static', filename='main/js/register.js') }}" defer></script>
+{% endblock %}
+
+
+
+{% block maincontent %}      
+    <!-- A block of content -->
+    <p class="login">Register</p>
+    <input type="email" title="Please enter your email address" id="email" class="password" placeholder=" Your Email" required/>
+    <input type="password" title="Please enter your password" id="password" class="password" placeholder=" Enter Password" required/>
+    <input type="password" title="Please reenter your password" id="re-password" class="password" placeholder=" Reenter Password" required/>
+    <button type="submit" title="Click to create an account" id="create-button" class="button">Create Account</button>
+    <p id="failure"></p>
+    <button type="button" title="Click to go back to login" id="back-button" class="button">Back to Login</button>
+
+{% endblock %}

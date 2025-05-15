@@ -11,9 +11,11 @@
 
 
 {% block maincontent %}
-<p class="login">Login</p>
-<input type="email" title="Please enter your email address" id="email" placeholder=" Your Email" required/>
-<input type="password" title="Please enter your password" id="password" placeholder=" Your Password" required/>
-<button type="submit" title="Click to submit login details" id="submit-button">Submit</button>
-<p id="failure"></p>
+    <p class="login">Login</p>
+    <input type="email" title="Please enter your email address" id="email" class="password" placeholder=" Your Email" required/>
+    <input type="password" title="Please enter your password" id="password" class="password" placeholder=" Your Password" required/>
+    <button type="submit" title="Click to submit login details" id="submit-button" class="button">Submit</button>
+    <p id="failure"></p>
+    <p>Or</p>
+    <button type="button" title="Click to register" id="register-button" class="button">Register</button>
 {% endblock %}

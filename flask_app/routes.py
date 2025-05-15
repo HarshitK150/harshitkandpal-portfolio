@@ -45,6 +45,21 @@ def processlogin():
 	
 	return json.dumps(status)
 
+@app.route('/register')
+def register():
+	return render_template('register.html')
+
+
+@app.route('/processregister', methods=["POST", "GET"])
+def processregister():
+	form_fields = dict((key, request.form.getlist(key)[0]) for key in list(request.form.keys()))
+	status = db.notExists('users', 'email', form_fields['email'])
+
+	if 'success' in status:
+		db.createUser(form_fields['email'], form_fields['password'])
+
+	return json.dumps(status)
+
 #######################################################################################
 # CHATROOM RELATED
 #######################################################################################

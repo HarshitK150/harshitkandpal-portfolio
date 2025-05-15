@@ -20,7 +20,7 @@ class database:
         self.user           = 'master'
         self.port           = 3306
         self.password       = 'master'
-        self.tables         = ['institutions', 'positions', 'users']
+        self.tables         = ['users',]
         
         # NEW IN HW 3-----------------------------------------------------------------
         self.encryption     =  {   'oneway': {'salt' : b'averysaltysailortookalongwalkoffashortbridge',
@@ -166,3 +166,11 @@ class database:
             return True
         
         return False
+
+    def notExists(self, table='users', match_field='email', match_to='me@email.com'):
+        query = f"SELECT * FROM `{table}` WHERE `{match_field}` = %s;"
+        parameters = (match_to,)
+
+        result = self.query(query, parameters)
+
+        return {'success': 1} if not result else {'failure': 2}

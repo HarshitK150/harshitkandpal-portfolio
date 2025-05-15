@@ -23,9 +23,15 @@ checkCredentials = function () {
     });
 };
 
+redirectRegister = function () {
+    window.location.href = "/register";
+}
+
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 const failure = document.querySelector('#failure');
 const button = document.querySelector('#submit-button');
+const register_button = document.querySelector('#register-button');
 
 button.addEventListener('click', checkCredentials);
+register_button.addEventListener('click', redirectRegister);
